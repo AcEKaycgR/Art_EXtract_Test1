@@ -100,7 +100,7 @@ Performance evaluation is conducted through both visual and quantitative means t
 
 **[1] Visualisation**
 
- The visual assessment involves showcasing the top K similar images with the highest distance score alongside the original image, offering an intuitive diagnosis of the model's understanding of image representations. 
+ The visual assessment involves showcasing the image outliers and also visualization of each of the metrics written below.You can see the vizualization in the results folder and the accuracy and loss in the repo directly.
  
 
 ### Key Evaluation Metrics
@@ -121,7 +121,88 @@ Performance evaluation is conducted through both visual and quantitative means t
 
 
 ## 👀 Results Analysis  
+### 1. Artist Classification
 
+
+#### Key Observations:
+- **High Accuracy (70-95%) for most artists**  
+  ✅ Distinct styles (e.g., Van Gogh's brushstrokes) are well-learned  
+  ✅ Picasso's non-Cubist works (Blue/Rose Periods) classify correctly
+
+- **Low Accuracy Cases**:
+  - Ilya_Repin (58.7%)
+  - Boris_Kustodiev (67.7%) 
+  **Causes**:
+  - Limited training samples for underrepresented artists
+  - Style overlap with similar realist painters
+
+- **Cubist Misclassification**:
+
+  # Prediction Example
+  true_artist = "Pablo_Picasso"
+  predicted = {
+      "Eugene_Boudin": 38.4,  # % confidence
+      "Albrecht_Durer": 29.0,
+      "Rembrandt": 20.0
+  }
+
+  **Root Causes**:
+  - It has been trained on more traditional Picasso paintings .
+  - Cubism’s abstract geometry differs significantly from other styles in the dataset.
+
+### 2. Genre Classification
+
+Moderate Overall Accuracy (75%) but Poor F1 Scores:
+#### Performance Issues:
+- **Dominant Classes Bias**:
+- Class Imbalance: Common genres (cityscape, genre_painting) dominate, so the model biases toward them.
+- Ambiguous Cases: Some abstract paintings resemble illustrations or sketches, leading to misclassifications.
+
+- **Near-Zero F1 Scores** for:
+  - `religious_painting` (0.00)
+  - `still_life` (0.01)
+  - Rare genres (religious_painting, still_life) have too few examples for the model to learn meaningful features.
+
+### 3. Style Classification
+Extremely Low Accuracy (7%) and F1 (0.04 avg):
+
+#### Failure Analysis:
+- **Granularity Problems**:
+- Too Many Fine-Grained Styles: Classes like Analytical Cubism vs. Synthetic Cubism are hard even for experts to distinguish.
+- Severe Data Imbalance: Some styles (Action_painting) have only 9 samples, making learning impossible.
+- Label Noise: Art styles are subjective—some paintings may be mislabeled in training.
+
+- **Minimalism vs. Cubism Confusion**:
+
+  # Misclassification Case
+  true_style = "Cubism"
+  predicted = {
+      "Minimalism": 0.62,  # Probability
+      "Color_Field_Painting": 0.33
+  }
+
+  **Visual Similarities**:
+  - The model confuses geometric abstraction (Cubism) with Minimalism due to overlapping visual features (simplified forms, flat colors).
+
+## Key Challenges
+
+| Issue | Impact | Solution Path |
+|-------|--------|---------------|
+| Class Imbalance | Biases toward majority classes | Oversampling + weighted loss |
+| Style Granularity | Unlearnable distinctions | Label consolidation |
+| Cubist Features | Fails on abstract works | Attention mechanisms |
+
+## Next Steps
+
+improvement_roadmap = [
+    "Merge similar style labels",
+    "Augmentming rare genre samples",
+    "Adding class-specific training data",
+    "Implementing Grad-CAM for error analysis"
+]
+
+
+> **Note**: Full confusion matrices and training curves available in `/results`
 
 ## 🔨 Possible Improvements  
 Was not able to implement most of these improvements mainly due to the need of stopping the model training halfway through because of college and travel.Would love to improve more on the model if given a chance also feel free to list any improvements that you may feel the project is lacking or any part that can be improved.
