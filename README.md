@@ -175,6 +175,7 @@ Extremely Low Accuracy (7%) and F1 (0.04 avg):
 - **Minimalism vs. Cubism Confusion**:
 
   # Misclassification Case
+   ![prediction](artwork_prediction.png)
   true_style = "Cubism"
   predicted = {
       "Minimalism": 0.62,  # Probability
