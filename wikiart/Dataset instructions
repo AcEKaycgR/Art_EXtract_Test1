@@ -1,0 +1,2 @@
+Download the wikiart dataset here from https://github.com/cs-chan/ArtGAN/blob/master/WikiArt%20Dataset/README.md
+and add the path of the final wikiart inside wikiart to the the WIKIART_DIR inside the code
