@@ -83,7 +83,7 @@ EfficientNetB2(weights='imagenet', include_top=False)
 | Genre  | Exponential Decay (5e-4 → -2%)     | 1e-5         | Focal Loss (γ=2.0)  |
 
 ### For Detailed architecture
-[[Artist model](utils/evaluation.py)],[[Genre Model](utils/evaluation.py)],[[Style model](utils/evaluation.py)]
+[[Artist model](results/evaluation.py)],[[Genre Model](results/evaluation.py)],[[Style model](results/evaluation.py)]
 
 ## 📂 Model Saving
 Best models automatically saved to:
@@ -101,7 +101,7 @@ Performance evaluation is conducted through both visual and quantitative means t
 **[1] Visualisation**
 
  The visual assessment involves showcasing the image outliers and also visualization of each of the metrics written below.You can see the vizualization in the results folder and the accuracy and loss in the repo directly.
- 
+ [[Results](results)]
 
 ### Key Evaluation Metrics
 | Metric                  | Implementation                          | Output File                     |
@@ -126,8 +126,8 @@ Performance evaluation is conducted through both visual and quantitative means t
 
 #### Key Observations:
 - **High Accuracy (70-95%) for most artists**  
-  ✅ Distinct styles (e.g., Van Gogh's brushstrokes) are well-learned  
-  ✅ Picasso's non-Cubist works (Blue/Rose Periods) classify correctly
+  - Distinct styles (e.g., Van Gogh's brushstrokes) are well-learned  
+  - Picasso's non-Cubist works (Blue/Rose Periods) classify correctly
 
 - **Low Accuracy Cases**:
   - Ilya_Repin (58.7%)
