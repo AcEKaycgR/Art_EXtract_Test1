@@ -20,12 +20,11 @@ The dataset is sourced from the **ArtGan** repository and consists of images of 
 
 ## 📁 Directory Structure  
 ```plaintext
-├── cnn_gru_art_classifier.ipynb   # Main code
+├── Art_Extract_Test1.ipynb        # Main code
 ├── wikiart/                       # Image dataset
 ├── wikiart_csv/                   # CSV files for labels and metadata
-├── models/                        # Trained models and checkpoints
-├── results/                       # Output and retrieved similar images
-├── requirements.txt               # Package requirements
+├── models/                        # Trained models 
+├── results/                       # Output and outlier images
 └── README.md                      # Project Documentation
 ```
 ---
@@ -83,7 +82,7 @@ EfficientNetB2(weights='imagenet', include_top=False)
 | Genre  | Exponential Decay (5e-4 → -2%)     | 1e-5         | Focal Loss (γ=2.0)  |
 
 ### For Detailed architecture
-[[Artist model](results/evaluation.py)],[[Genre Model](results/evaluation.py)],[[Style model](results/evaluation.py)]
+[[Artist model](results/model_architecture_artist.png)],[[Genre Model](results/model_architecture_genre.png)],[[Style model](results/model_architecture_style.png)]
 
 ## 📂 Model Saving
 Best models automatically saved to:
@@ -102,6 +101,9 @@ Performance evaluation is conducted through both visual and quantitative means t
 
  The visual assessment involves showcasing the image outliers and also visualization of each of the metrics written below.You can see the vizualization in the results folder and the accuracy and loss in the repo directly.
  [[Results](results)]
+ -example 
+   ![accuracy ,loss](training_history_artist.png)
+   ![accuracy ,loss](results/f1_scores_artist.png)
 
 ### Key Evaluation Metrics
 | Metric                  | Implementation                          | Output File                     |
@@ -123,11 +125,9 @@ Performance evaluation is conducted through both visual and quantitative means t
 ## 👀 Results Analysis  
 ### 1. Artist Classification
 
-
 #### Key Observations:
 - **High Accuracy (70-95%) for most artists**  
   - Distinct styles (e.g., Van Gogh's brushstrokes) are well-learned  
-  - Picasso's non-Cubist works (Blue/Rose Periods) classify correctly
 
 - **Low Accuracy Cases**:
   - Ilya_Repin (58.7%)
