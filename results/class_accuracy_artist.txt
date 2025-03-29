@@ -1,0 +1,24 @@
+Class-wise Evaluation:
+0 Albrecht_Durer - Accuracy: 0.8629
+1 Boris_Kustodiev - Accuracy: 0.6772
+10 Ivan_Shishkin - Accuracy: 0.7632
+11 John_Singer_Sargent - Accuracy: 0.7879
+12 Marc_Chagall - Accuracy: 0.7820
+13 Martiros_Saryan - Accuracy: 0.7650
+14 Nicholas_Roerich - Accuracy: 0.9518
+15 Pablo_Picasso - Accuracy: 0.9378
+16 Paul_Cezanne - Accuracy: 0.6894
+17 Pierre_Auguste_Renoir - Accuracy: 0.9422
+18 Pyotr_Konchalovsky - Accuracy: 0.9103
+19 Raphael_Kirchner - Accuracy: 0.6809
+2 Camille_Pissarro - Accuracy: 0.8472
+20 Rembrandt - Accuracy: 0.8256
+21 Salvador_Dali - Accuracy: 0.8734
+22 Vincent_van_Gogh - Accuracy: 0.7719
+3 Childe_Hassam - Accuracy: 0.8382
+4 Claude_Monet - Accuracy: 0.8571
+5 Edgar_Degas - Accuracy: 0.8182
+6 Eugene_Boudin - Accuracy: 0.9351
+7 Gustave_Dore - Accuracy: 0.9270
+8 Ilya_Repin - Accuracy: 0.5874
+9 Ivan_Aivazovsky - Accuracy: 0.8607

@@ -1,0 +1,29 @@
+                          precision    recall  f1-score   support
+
+        0 Albrecht_Durer       0.86      0.86      0.86       248
+       1 Boris_Kustodiev       0.67      0.68      0.68       189
+        10 Ivan_Shishkin       0.77      0.76      0.77       266
+  11 John_Singer_Sargent       0.75      0.79      0.77       165
+         12 Marc_Chagall       0.82      0.78      0.80       399
+      13 Martiros_Saryan       0.90      0.77      0.83       183
+     14 Nicholas_Roerich       0.83      0.95      0.89       166
+        15 Pablo_Picasso       0.97      0.94      0.95       225
+         16 Paul_Cezanne       0.69      0.69      0.69       161
+17 Pierre_Auguste_Renoir       0.91      0.94      0.93       173
+   18 Pyotr_Konchalovsky       0.73      0.91      0.81       156
+     19 Raphael_Kirchner       0.78      0.68      0.73       235
+      2 Camille_Pissarro       0.90      0.85      0.87       229
+            20 Rembrandt       0.84      0.83      0.83       172
+        21 Salvador_Dali       0.89      0.87      0.88       545
+     22 Vincent_van_Gogh       0.71      0.77      0.74       228
+         3 Childe_Hassam       0.72      0.84      0.78       173
+          4 Claude_Monet       0.88      0.86      0.87       420
+           5 Edgar_Degas       0.87      0.82      0.84       275
+         6 Eugene_Boudin       0.92      0.94      0.93       154
+          7 Gustave_Dore       0.87      0.93      0.90       233
+            8 Ilya_Repin       0.69      0.59      0.63       143
+       9 Ivan_Aivazovsky       0.83      0.86      0.85       567
+
+                accuracy                           0.83      5705
+               macro avg       0.82      0.82      0.82      5705
+            weighted avg       0.83      0.83      0.83      5705

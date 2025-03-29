@@ -1,0 +1,11 @@
+Class-wise Evaluation:
+0 abstract_painting - Accuracy: 0.0872
+1 cityscape - Accuracy: 0.0623
+2 genre_painting - Accuracy: 0.1271
+3 illustration - Accuracy: 0.0351
+4 landscape - Accuracy: 0.1841
+5 nude_painting - Accuracy: 0.0382
+6 portrait - Accuracy: 0.1957
+7 religious_painting - Accuracy: 0.1133
+8 sketch_and_study - Accuracy: 0.1100
+9 still_life - Accuracy: 0.0622
