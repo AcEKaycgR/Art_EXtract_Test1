@@ -230,7 +230,6 @@ Was not able to implement most of these improvements mainly due to the need of s
 - NumPy
 - scikit-learn
 - Matplotlib (visualizations)
-- Dependencies
 - seaborn for visualization
 - scikit-learn metrics
 - Pandas
